@@ -6,7 +6,7 @@ admin.site.register(Comment)
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status')
+    list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title']
     list_filter = ('status',)
     prepopulated_fields = {'slug': ('title',)}
